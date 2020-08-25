@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.com.domestic.cat.kaan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="false"
+        android:name="au.com.domestic.cat.kaan.MainApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+
+<!--    <activity android:name="au.com.outware.omproject.splash.presentation.SplashActivity"-->
+<!--        android:windowSoftInputMode="adjustResize"  >-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.VIEW" />-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
+<!--            <category android:name="android.intent.category.DEFAULT" />-->
+
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--        </intent-filter>-->
+<!--    </activity>-->
+<!--    <activity android:name="au.com.outware.omproject.components.presentation.ComponentsListActivity" />-->
+<!--    <activity android:name="au.com.outware.omproject.components.presentation.TermsAndConditionsActivity" />-->
+<!--    <activity-->
+<!--        android:name="au.com.outware.omproject.view.PinEntryActivity"-->
+<!--        android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />-->
+<!--    <activity android:name="au.com.outware.omproject.home.presentation.TabHomeActivity"-->
+<!--        android:theme="@style/HomeScreenTheme"/>-->
+<!--    <activity android:name="au.com.outware.omproject.agreement.presentation.AgreementDetailActivity" />-->
+
+<!--    <activity android:name="au.com.outware.omproject.agreement.presentation.TermsConditionListActivity" />-->
+
+<!--    <activity-->
+<!--        android:name="au.com.outware.omproject.login.presentation.LoginActivity"-->
+<!--        android:windowSoftInputMode="adjustResize|stateAlwaysVisible"-->
+<!--        android:screenOrientation="portrait" />-->
+<!--    <activity-->
+<!--        android:name="au.com.outware.omproject.onboarding.presentation.OnboardingActivity"-->
+<!--        android:screenOrientation="portrait"-->
+<!--        android:theme="@style/OnboardingTheme" />-->
+
+<!--    <activity android:name="au.com.outware.omproject.common.WebviewActivity" />-->
