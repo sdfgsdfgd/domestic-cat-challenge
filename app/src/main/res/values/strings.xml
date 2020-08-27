@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Kaan Domestic Cat Challenge</string>
+    <string name="app_name">kaantest</string>
+    <string name="nav_restaurants">Restaurants</string>
+    <string name="nav_favourites">Favourites</string>
+    <string name="restaurants_title">Abbotsford</string>
+    <string name="favourites_title">Favourites</string>
 </resources>

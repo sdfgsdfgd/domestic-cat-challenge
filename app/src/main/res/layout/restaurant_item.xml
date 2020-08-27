@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="au.com.domestic.cat.kaantest.ui.restaurants.model.RestaurantItem" />
+    </data>
+
+
+    <!-- TODO   Set the background with Picasso, URL -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/news_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/cardview_dark_background"
+        android:contentDescription="@{item.contentDescription}">
+
+
+        <!--   TODO     The gradient:     top %0    bottom %70   color: #000   (white) -->
+        <!--        android:onClick="@{() -> item.onClick()}"-->
+        <View
+            android:id="@+id/news_item_focus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/news_term"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.title}"
+            android:contentDescription="@{item.contentDescription}"
+            android:textAppearance="?textAppearanceButton"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Placeholder Text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
