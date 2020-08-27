@@ -22,9 +22,40 @@ class RestaurantsViewModel @Inject constructor(private val restaurantsRepository
     private val _restaurants = MutableLiveData<List<RestaurantItem>>(
         listOf(
             RestaurantItem(
-                "Abbotsford",
-                "Ichimaku Kurenai Sensei",
-                "Batmans Abbotford"
+                "0",
+                "Ichiraku Ramen",
+                "Abbotsford, Melbourne",
+                R.drawable.feat0
+            ),
+            RestaurantItem(
+                "1",
+                "Burger King",
+                "Abbotford, Melbourne",
+                R.drawable.feat2
+            ),
+            RestaurantItem(
+                "2",
+                "KFC",
+                "Abbotford, Melbourne",
+                R.drawable.feat3
+            ),
+            RestaurantItem(
+                "3",
+                "UMINONO",
+                "Abbotford, Melbourne",
+                R.drawable.feat0
+            ),
+            RestaurantItem(
+                "4",
+                "Lentil As Anything",
+                "Abbotford, Melbourne",
+                R.drawable.feat3
+            ),
+            RestaurantItem(
+                "5",
+                "Rita's Abbotsford",
+                "Abbotford, Melbourne",
+                R.drawable.feat2
             )
         )
     )
@@ -51,7 +82,7 @@ class RestaurantsViewModel @Inject constructor(private val restaurantsRepository
 
             try {
                 _restaurants.value = restaurantsRepository.getRestaurants().map {
-                    RestaurantItem(it.id, it.title, it.address)
+                    RestaurantItem(it.id, it.title, it.address, 0)
                 }
 
                 Log.d("XXX", "========================================================")

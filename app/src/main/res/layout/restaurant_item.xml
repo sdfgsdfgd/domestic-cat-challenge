@@ -16,7 +16,8 @@
         android:id="@+id/news_item_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/cardview_dark_background">
+        android:background="@drawable/feat0"
+        tools:background="@drawable/feat0">
 
         <!--   TODO     The gradient:     top %0    bottom %70   color: #000   (white) -->
         <!--        android:onClick="@{() -> item.onClick()}"-->
@@ -24,7 +25,7 @@
             android:id="@+id/news_item_focus"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="?selectableItemBackground"
+            android:background="@drawable/gradient"
             android:clickable="true"
             android:focusable="true"
             android:importantForAccessibility="no"
