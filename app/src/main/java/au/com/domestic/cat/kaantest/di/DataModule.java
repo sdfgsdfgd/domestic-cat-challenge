@@ -20,12 +20,12 @@ public abstract class DataModule {
     @Singleton
     static ZomatoApi provideZomatoApi() {
         // Enable Google Http Client logging
-        Logger.getLogger(HttpTransport.class.getName()).setLevel(Level.CONFIG);
+        Logger.getLogger(HttpTransport.class.getName()).setLevel(Level.ALL);
 
         ZomatoApi.Builder builder = new ZomatoApi.Builder(
                 new NetHttpTransport(),
                 AndroidJsonFactory.getDefaultInstance(),
-                "https://developers.zomato.com/api",
+                "https://developers.zomato.com/",
                 null
         );
         return builder.build();
@@ -36,17 +36,5 @@ public abstract class DataModule {
 //    @Singleton
 //    static FavouriteDao provideFavouriteDao(AppDatabase database) {
 //        return database.favouriteDao();
-//    }
-//
-//    @Provides
-//    @Singleton
-//    static CommonDao provideCommonDao(AppDatabase database) {
-//        return database.commonDao();
-//    }
-//
-//    @Provides
-//    @Singleton
-//    static RecentDao provideRecentDao(AppDatabase database) {
-//        return database.recentDao();
 //    }
 }

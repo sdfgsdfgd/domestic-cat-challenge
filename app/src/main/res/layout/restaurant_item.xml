@@ -16,9 +16,7 @@
         android:id="@+id/news_item_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/cardview_dark_background"
-        android:contentDescription="@{item.contentDescription}">
-
+        android:background="@color/cardview_dark_background">
 
         <!--   TODO     The gradient:     top %0    bottom %70   color: #000   (white) -->
         <!--        android:onClick="@{() -> item.onClick()}"-->
@@ -36,14 +34,23 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/news_term"
+            android:id="@+id/restaurant_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{item.title}"
-            android:contentDescription="@{item.contentDescription}"
-            android:textAppearance="?textAppearanceButton"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#FFFFFF"
             android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/restaurant_address"
+            tools:text="Placeholder Text" />
+
+        <TextView
+            android:id="@+id/restaurant_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.address}"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Placeholder Text" />

@@ -13,12 +13,12 @@ import javax.inject.Inject
 
 
 class RestaurantsFragment : DaggerFragment() {
-    @Inject                                                   // ?
-    lateinit var viewModelFactory: ViewModelProvider.Factory  // ?
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private lateinit var binding: RestaurantsFragmentBinding
 
-    private val viewModel: RestaurantsViewModel by viewModels { viewModelFactory }   // ?
+    private val viewModel: RestaurantsViewModel by viewModels { viewModelFactory }
 
     override fun onCreateView(
         inflater: LayoutInflater,

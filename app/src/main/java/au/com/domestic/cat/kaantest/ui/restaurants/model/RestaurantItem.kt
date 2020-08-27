@@ -1,9 +1,9 @@
 package au.com.domestic.cat.kaantest.ui.restaurants.model
 
 class RestaurantItem(
-    val id: Int,
+    val id: String,
     val title: String,
-    val contentDescription: String
+    val address: String
 //    private val onClickHandler: (Restaurant) -> Unit,
 //    private val restaurant: Restaurant
 ) {

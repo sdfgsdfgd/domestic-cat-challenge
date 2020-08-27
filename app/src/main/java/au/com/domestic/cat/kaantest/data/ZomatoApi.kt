@@ -1,5 +1,6 @@
 package au.com.domestic.cat.kaantest.data
 
+import au.com.domestic.cat.kaantest.data.restaurants.RestaurantsRequest
 import com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient
 import com.google.api.client.http.HttpRequestInitializer
 import com.google.api.client.http.HttpTransport
@@ -18,21 +19,14 @@ class ZomatoApi(builder: Builder) : AbstractGoogleJsonClient(builder) {
         rootUrl,
         "",
         httpRequestInitializer,
-        false) {
+        false
+    ) {
 
         override fun build(): ZomatoApi = ZomatoApi(this)
     }
 
-//    fun outlets() = Outlets(this)
-//    fun stops() = Stops(this)
-//    fun journeyPlans() = JourneyPlanner(this)
-//    fun search() = Search(this)
-//    fun departures() = Departures(this)
-//    fun routes() = DepartureRoute(this)
-//    fun route() = Route(this)
-//    fun directions() = Directions(this)
-//    fun routeStops() = RouteStops(this)
-//    fun patterns() = Patterns(this)
-//    fun operators() = Operators(this)
-//    fun disruptions() = Disruptions(this)
+    fun getRestaurants() = RestaurantsRequest(this)
 }
+
+//                      https://developers.zomato.com/api
+// TODO:  API Key           527f59ce23d59e0672bdd95f4bc42d86
